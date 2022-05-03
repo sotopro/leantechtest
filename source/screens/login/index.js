@@ -40,11 +40,12 @@ const Login = () => {
         },
         {text: 'OK', onPress: () => console.log('OK Pressed')},
       ]);
+    } else {
+      setAuth({
+        email,
+        token: '123456789',
+      });
     }
-    setAuth({
-      email,
-      token: '123456789',
-    });
   };
 
   return (
@@ -87,7 +88,7 @@ const Login = () => {
           title={'Ingresar'}
           onPress={() => handleAuth()}
           disabled={isNotValid}
-          color="#00a680"
+          color="#EF7B45"
         />
       </View>
     </KeyboardAvoidingView>
