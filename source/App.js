@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {AuthProvider} from './context/auth';
+import AppNavigation from './navigation/index';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hello</Text>
-    </View>
+    <AuthProvider>
+      <AppNavigation />
+    </AuthProvider>
   );
 };
 export default App;
